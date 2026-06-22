@@ -13,7 +13,7 @@
     "start:server": "cd server && node server.js"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
