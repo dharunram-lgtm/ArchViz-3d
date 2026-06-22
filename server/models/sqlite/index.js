@@ -320,7 +320,7 @@ const Project = {
   },
 
   aggregate: (pipeline) => {
-    const group = pipeline.find(s => s.$group);
+    const group = (pipeline || []).find(s => s.$group);
     if (group) {
       const rows = db.prepare('SELECT date(createdAt) as date, COUNT(*) as count FROM projects GROUP BY date(createdAt) ORDER BY date DESC LIMIT 30').all();
       return rows.map(r => ({ _id: r.date, count: r.count }));
