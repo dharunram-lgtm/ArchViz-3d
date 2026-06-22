@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blueprint Viewer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 640px;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.75rem;
+    }
+    p { font-size: 1.125rem; color: #94a3b8; margin-bottom: 2rem; line-height: 1.6; }
+    .card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    .card h2 { font-size: 1.25rem; margin-bottom: 1rem; color: #38bdf8; }
+    code {
+      background: #1e293b;
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      color: #a5f3fc;
+      display: inline-block;
+      margin: 0.25rem 0;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step-num {
+      background: #38bdf8;
+      color: #0f172a;
+      font-weight: 700;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.875rem;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      color: #0f172a;
+      font-weight: 600;
+      padding: 0.875rem 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: 0.5rem;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(56, 189, 248, 0.3);
+      text-decoration: none;
+    }
+    .links { margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      font-size: 0.8rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="badge">ArchViz 3D</span>
+    <h1>Blueprint Viewer</h1>
+    <p>Upload 2D floor plans and explore them as interactive 3D building models.</p>
+
+    <div class="card">
+      <h2>How to Launch</h2>
+      <div class="step">
+        <span class="step-num">1</span>
+        <div>Open a terminal in the project root and run <code>npm run install:all</code> to install dependencies.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <div>Run <code>npm run dev</code> to start both the frontend and backend servers.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <div>Open the app in your browser at <a href="http://localhost:5173" target="_blank">localhost:5173</a>.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Quick Links</h2>
+      <div class="links">
+        <a href="http://localhost:5173" target="_blank" class="btn">Open App</a>
+        <a href="http://localhost:5000" target="_blank" class="btn" style="background:rgba(148,163,184,0.15);color:#e2e8f0;">API Server</a>
+      </div>
+    </div>
+
+    <p style="font-size:0.875rem;color:#64748b;margin-top:1.5rem;">
+      React + Three.js &middot; Express + MongoDB &middot; Tailwind CSS
+    </p>
+  </div>
+</body>
+</html>

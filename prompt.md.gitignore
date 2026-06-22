@@ -1,0 +1,168 @@
+Build a **Web-Based 3D Architectural Blueprint Viewer** using **React.js, Three.js (React Three Fiber), Node.js, Express.js, and MongoDB**.
+
+The application should allow users to upload 2D architectural floor plans (PNG, JPG, PDF, or DXF files) and visualize them as interactive 3D building models directly in the browser.
+
+### User Authentication
+
+* User Registration and Login
+* JWT Authentication
+* Secure Password Hashing
+* User Profile Management
+
+### Dashboard
+
+* Create New Project
+* Upload Blueprint Files
+* View Saved Projects
+* Edit Existing Projects
+* Delete Projects
+* Search and Filter Projects
+
+### 2D to 3D Blueprint Conversion
+
+* Upload floor plan images or CAD files
+* Detect walls, rooms, doors, and windows
+* Generate 3D walls through extrusion
+* Create room layouts automatically
+* Generate building structure in real time
+
+### 3D Visualization Module
+
+* Interactive 3D Viewer using Three.js
+* Rotate, Zoom, and Pan Controls
+* Fullscreen Mode
+* Responsive Design for Desktop and Mobile
+* Smooth Rendering and Navigation
+
+### Walkthrough Mode
+
+* First-Person Navigation
+* WASD Keyboard Controls
+* Mouse Look Controls
+* Collision Detection with Walls
+* Realistic Movement Speed
+
+### Layer Management
+
+* Structural Layer
+* Furniture Layer
+* Electrical Layer
+* Plumbing Layer
+* Ceiling Layer
+* Toggle Visibility for Each Layer
+
+### Measurement Tools
+
+* Distance Measurement Between Two Points
+* Room Area Calculation
+* Wall Length Calculation
+* Dimension Labels
+
+### Annotation System
+
+* Add Notes Anywhere on the Model
+* Comment Pins
+* Edit/Delete Annotations
+* Save Annotations to Database
+
+### Material and Lighting Customization
+
+* Change Wall Colors
+* Apply Floor Textures
+* Apply Ceiling Textures
+* Furniture Materials
+* Dynamic Sunlight Simulation
+* Day and Night Mode
+* Realistic Shadows and Reflections
+
+### Admin Panel
+
+* Manage Users
+* Manage Projects
+* View Analytics Dashboard
+* Monitor Uploaded Files
+* Delete Inappropriate Content
+
+### Database Design
+
+Collections:
+
+* Users
+* Projects
+* Blueprints
+* Annotations
+* Materials
+* Activity Logs
+
+### Backend APIs
+
+* Authentication APIs
+* Project CRUD APIs
+* File Upload APIs
+* Annotation APIs
+* Material Update APIs
+* Admin APIs
+
+### Additional Features
+
+* Project Sharing via Link
+* Export 3D Model as OBJ/GLTF
+* Export Screenshots
+* Undo/Redo Actions
+* Auto Save Functionality
+* Dark/Light Theme
+
+### Technology Stack
+
+Frontend:
+
+* React.js
+* Tailwind CSS
+* React Three Fiber
+* Drei
+* Axios
+
+Backend:
+
+* Node.js
+* Express.js
+
+Database:
+
+* MongoDB
+
+Authentication:
+
+* JWT
+* bcrypt
+
+Storage:
+
+* Multer
+* Cloudinary
+
+3D Rendering:
+
+* Three.js
+* React Three Fiber
+
+Deployment:
+
+* Vercel (Frontend)
+* Render (Backend)
+* MongoDB Atlas (Database)
+
+### UI Requirements
+
+Create a modern professional architecture-themed interface with:
+
+* Responsive Dashboard
+* Sidebar Navigation
+* Project Cards
+* Interactive 3D Canvas
+* Material Customization Panel
+* Measurement Toolbar
+* Annotation Sidebar
+* Admin Dashboard
+
+The application should follow a clean folder structure, reusable React components, RESTful API architecture, secure authentication, and production-ready coding standards.
