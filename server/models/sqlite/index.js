@@ -453,6 +453,7 @@ const Annotation = {
 
   deleteMany: (query) => {
     if (query.project) db.prepare('DELETE FROM annotations WHERE projectId = ?').run(query.project);
+    if (query.user) db.prepare('DELETE FROM annotations WHERE userId = ?').run(query.user);
     if (query._id || query.id) db.prepare('DELETE FROM annotations WHERE id = ?').run(query._id || query.id);
   },
 };
@@ -543,6 +544,11 @@ const ActivityLog = {
       log.user = u ? { _id: u._id, name: u.name, email: u.email } : { name: 'System' };
       return log;
     });
+  },
+
+  deleteMany: (query) => {
+    if (query.user) db.prepare('DELETE FROM activity_logs WHERE userId = ?').run(query.user);
+    if (query._id || query.id) db.prepare('DELETE FROM activity_logs WHERE id = ?').run(query._id || query.id);
   },
 
   countDocuments: (query = {}) => {

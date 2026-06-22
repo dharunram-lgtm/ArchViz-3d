@@ -1,4 +1,4 @@
-const { User, Project, Blueprint, ActivityLog } = require('../models/sqlite');
+const { User, Project, Blueprint, Annotation, ActivityLog } = require('../models/sqlite');
 
 exports.getDashboard = async (req, res) => {
   try {
@@ -55,6 +55,8 @@ exports.deleteUser = async (req, res) => {
     }
 
     Project.deleteMany({ user: user._id });
+    Annotation.deleteMany({ user: user._id });
+    ActivityLog.deleteMany({ user: user._id });
     User.deleteOne({ _id: user._id });
 
     ActivityLog.create({
