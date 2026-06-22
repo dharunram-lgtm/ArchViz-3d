@@ -7,9 +7,13 @@
     "dev:server": "cd server && npm run dev",
     "dev:client": "cd client && npm run dev",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "postinstall": "cd server && npm install && cd ../client && npm install",
     "build": "cd client && npm run build",
-    "start": "npm run build && cd server && NODE_ENV=production node server.js",
+    "start": "cd server && NODE_ENV=production node server.js",
     "start:server": "cd server && node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
